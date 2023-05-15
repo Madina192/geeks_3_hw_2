@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.InfoFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personal Information: "
+        android:textSize="25sp"
+        android:textColor="@color/pink"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="120dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Name: "
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Last Name: "
+                android:layout_marginVertical="15dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Age: "
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Gender: "
+                android:layout_marginVertical="15dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Study Address: "
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Base.TextView"
+                android:text="Job Address: "
+                android:layout_marginTop="15dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginStart="30dp"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_name"
+                style="@style/Base.TextView"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_lastname"
+                style="@style/Base.TextView"
+                android:layout_marginVertical="15dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_age"
+                style="@style/Base.TextView"
+                android:text="20"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_gender"
+                style="@style/Base.TextView"
+                android:text="Female"
+                android:layout_marginVertical="15dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_study_address"
+                style="@style/Base.TextView"
+                android:text="Ala-Too"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_job_address"
+                style="@style/Base.TextView"
+                android:text="IT Company"
+                android:layout_marginTop="15dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
