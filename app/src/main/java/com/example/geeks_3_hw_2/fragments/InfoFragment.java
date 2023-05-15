@@ -47,9 +47,8 @@ public class InfoFragment extends Fragment {
     }
 
     private void setTextForViews() {
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            textViewName.setText(bundle.getString("name"));
+        if (getArguments() != null) {
+            textViewName.setText(getArguments().getString("name"));
             textViewLastName.setText(getArguments().getString("lastName"));
             textViewAge.setText(getArguments().getString("age"));
             textViewGender.setText(getArguments().getString("gender"));

@@ -53,15 +53,18 @@ public class SecondFragment extends Fragment {
         requireActivity()
                 .getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, new ThirdFragment())
+                .replace(R.id.fragment_container, thirdFragment)
                 .addToBackStack(null)
                 .commit();
     }
 
     private void putElements() {
         Bundle bundle = new Bundle();
-        bundle.putString("name", getArguments() != null ? getArguments().getString("name") : null);
-        bundle.putString("lastName", getArguments().getString("lastName"));
+        if (getArguments() != null) {
+            bundle.putString("name", getArguments().getString("name"));
+            bundle.putString("lastName", getArguments().getString("lastName"));
+            System.out.println(getArguments().getString("name"));
+        }
         bundle.putString("age", Objects.requireNonNull(editTextAge.getText()).toString());
         bundle.putString("gender", Objects.requireNonNull(editTextGender.getText()).toString());
         thirdFragment.setArguments(bundle);

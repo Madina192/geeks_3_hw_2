@@ -54,17 +54,19 @@ public class ThirdFragment extends Fragment {
         requireActivity()
                 .getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, new InfoFragment())
+                .replace(R.id.fragment_container, infoFragment)
                 .addToBackStack(null)
                 .commit();
     }
 
     private void putElements() {
         Bundle bundle = new Bundle();
-        bundle.putString("name", getArguments() != null ? getArguments().getString("name") : null);
-        bundle.putString("lastName", getArguments().getString("lastName"));
-        bundle.putString("age", getArguments().getString("age"));
-        bundle.putString("gender", getArguments().getString("gender"));
+        if (getArguments() != null) {
+            bundle.putString("name", getArguments().getString("name"));
+            bundle.putString("lastName", getArguments().getString("lastName"));
+            bundle.putString("age", getArguments().getString("age"));
+            bundle.putString("gender", getArguments().getString("gender"));
+        }
         bundle.putString("studyAddress", Objects.requireNonNull(editTextStudyAddress.getText()).toString());
         bundle.putString("jobAddress", Objects.requireNonNull(editTextJobAddress.getText()).toString());
         infoFragment.setArguments(bundle);
